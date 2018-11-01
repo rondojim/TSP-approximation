@@ -6,3 +6,11 @@ One of the best-known approximation algorithms for TSP is Christofides' algorith
 
 We provide an experimental evaluation of our heuristic. In particular, we implement in C++ three algorithms: (a) a brute-force algorithm that returns the optimal TSP solution and has exponential complexity, (b) Christofides' algorithm which has much better complexity but returns an approximate solution, and (c) our extension of Christofides' algorithm that examines many alternative minimum spanning trees. The experimental results suggest that our heuristic returns an approximate solution that is on the average significantly better than the one produced by the original Christofides' algorithm.
 
+Files:
+
+input.txt: contains the 8008 different placements of 10 cities in the grid [0,3]x[0,3].
+
+ratio_comparison.cpp: C++ implementation of a brute-forces, dynamic programming algorithm for TSP and of our heuristic for TSP.
+
+results(k=1).txt,...,results(k=10).txt: Each of these files contains the performance of our extension for a different number of minimum spanning trees used. The case k=1 is the original algorithm of Christofides. The case k=10 uses 10 minimum spanning trees and selects the best Hamilton cycle produced by these 10 different trees.
+
